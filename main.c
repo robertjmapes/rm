@@ -17,11 +17,8 @@ int help() {
 }
 
 void _remove(char* file, int dir_flag) {
-
-	if (dir_flag) {
-  		if (rmdir(file) != 0)
-    		perror("rmdir");
-    }
+	if (dir_flag)
+		rmdir(file);
     else remove(file);
 }
 
